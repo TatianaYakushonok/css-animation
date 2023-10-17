@@ -1,0 +1,136 @@
+html {
+  position: relative;
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: normal;
+}
+
+h1,
+h2,
+p {
+  margin: 0;
+}
+
+.container {
+  max-width: 1260px;
+  margin: 0 auto;
+  padding: 30px;
+}
+
+.bar {
+  margin-bottom: 30px;
+}
+
+.bar__wrapp {
+  width: 600px;
+  height: 25px;
+  border: 1px solid blue;
+  background: #fff;
+}
+
+.bar__fill {
+  height: inherit;
+  background-color: green;
+  animation-name: progress-animate;
+  animation-duration: 5s;
+  animation-fill-mode: forwards;
+  transition: width 0.8s ease;
+}
+
+@keyframes progress-animate {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 90%;
+  }
+}
+
+.box {
+  width: 50px;
+  height: 50px;
+  margin-bottom: 30px;
+  background-color: orange;
+  animation-name: width-animation;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  animation-play-state: paused;
+}
+
+.box:hover {
+  animation-play-state: running;
+}
+
+@keyframes width-animation {
+  from {
+    width: 50px;
+  }
+  50% {
+    width: 100%;
+  }
+  to {
+    width: 50px;
+  }
+}
+
+.boll-wrapp {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  margin: 0 auto;
+  overflow: hidden;
+  border: 2px solid blue;
+}
+
+.boll {
+  position: absolute;
+  top: -16px;
+  left: 0;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background-color: red;
+  animation-name: boll-animation;
+  animation-duration: 2s;
+  animation-timing-function: cubic-bezier(0.03, 0.44, 1, 0.66);
+  animation-iteration-count: infinite;
+}
+
+@keyframes boll-animation {
+  from {
+    top: -16px;
+    left: 0;
+  }
+  20% {
+    top: 180px;
+    left: 50px;
+  }
+  40% {
+    top: 140px;
+    left: 70px;
+  }
+  60% {
+    top: 180px;
+    left: 90px;
+  }
+  80% {
+    top: 150px;
+    left: 110px;
+  }
+  to {
+    top: 180px;
+    left: 130px;
+  }
+}
